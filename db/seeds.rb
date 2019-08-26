@@ -1,6 +1,6 @@
 100.times do 
   Artist.create!(
-    name: Faker::Pokemon.name,
+    name: Faker::TvShows::TheITCrowd.character,
     song: Faker::WorldOfWarcraft.quote)
 end
 

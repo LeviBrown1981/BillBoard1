@@ -18,6 +18,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'semantic-ui-sass'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
+gem'faker'
+
 
 group :development, :test do
   gem 'pry-rails'
