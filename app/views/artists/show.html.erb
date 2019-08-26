@@ -1,0 +1,17 @@
+<h1><%= @artist.name </h1>
+<h1><%= @list.name %></h1>
+<h4>Name: <%= @artist.name %></h4>
+<h4>Species: <%= @artist.species %></h4>
+<h4>Age: <%= @artist.age %></h4>
+<br />
+<h2>Songs</h2>
+<% @artist.congs.each do |song| %>
+  <%= render 'songs/song', { song: song } %>
+<% end %>
+<br />
+<%= link_to 'Add Song', new_artist_song_path(@artist), class: "ui button blue" %>
+<br />
+<br />
+<%= link_to 'Edit Artist', edit_list_artist_path([@list, @artist]), class: "ui button invert blue" %> |
+<%= link_to 'Delete Artist', [@list, @artist], method: :delete, class: "ui button invert red" %> |
+<%= link_to 'Back To Artists', list_artists_path(@list), class: "ui button" %>
